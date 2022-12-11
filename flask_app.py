@@ -1,4 +1,5 @@
 import numpy as np
+import xgboost
 import joblib
 from flask import Flask, request, render_template
 app = Flask(__name__)
