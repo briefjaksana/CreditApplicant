@@ -1,9 +1,9 @@
 import numpy as np
-import pickle
+import joblib
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
-loaded_model = pickle.load(open(xg20, 'rb'))
+loaded_model = pickle.load(xg20.pkl)
 
 def pp_Gender(Gender):
     Gender = 0
