@@ -1,0 +1,49 @@
+<html>
+<html >
+<head>
+  <title>Heart Disease and house price Prediction</title>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+<div class="login">
+    <h1>Heart Disease Prediction</h1>
+    <h2>keterangan:</h2>
+    <h4>Chest Pain Type : ATA, NAP, TA, ASY</h4>
+    <h4>RestingECG : Normal, ST, LVH</h4>
+    <h4>ST Slope : Flat, Up, Down</h4>
+
+     <!-- Main Input For Receiving Query to heart disease prediction -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" step=any name="EXT_SOURCE_1" placeholder="EXT SOURCE 1" required="required" />
+        <input type="text" step=any name="EXT_SOURCE_2" placeholder="EXT SOURCE 2" required="required" />
+        <input type="text" step=any name="EXT_SOURCE_3" placeholder="EXT SOURCE 3" required="required" />
+        <input type="text" step=any name="AMT_CREDIT" placeholder="AMT CREDIT" required="required" />
+        <input type="text" step=any name="DAYS_ID_PUBLISH" placeholder="DAYS ID PUBLISH" required="required" />
+        <input type="text" step=any name="DAYS_BIRTH" placeholder="DAYS BIRTH" required="required" />
+        <input type="text" name="Sex" placeholder="Sex : Male/Female" required="required" />
+        <input type="text" name="EDUCATION_TYPE" placeholder="EDUCATION" required="required" />
+        <input type="text" step=any name="AMT_GOODS_PRICE" placeholder="AMT GOODS PRICE" required="required" />
+        <input type="text" step=any name="AMT_ANNUITY" placeholder="AMT ANNUITY" required="required" />
+        <input type="text" step=any name="DAYS_EMPLOYED" placeholder="DAYS EMPLOYED" required="required" />
+        <input type="text" step=any name="OWN_CAR_AGE" placeholder="OWN CAR AGE" required="required" />
+        <input type="text" step=any name="AMT_INCOME_TOTAL" placeholder="AMT INCOME TOTAL" required="required" />
+
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
