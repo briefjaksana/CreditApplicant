@@ -3,7 +3,7 @@ import joblib
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
-loaded_model = pickle.load(xg20.pkl)
+loaded_model = joblib.load(xg20.pkl)
 
 def pp_Gender(Gender):
     Gender = 0
