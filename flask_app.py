@@ -1,10 +1,10 @@
 import numpy as np
 import xgboost
-import joblib
+import pickle
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
-loaded_model= joblib.load('xgboost20.pkl')
+loaded_model = pickle.load(open(xgboost20.sav, 'rb'))
 
 def pp_Gender(Gender):
     Gender = 0
