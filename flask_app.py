@@ -3,7 +3,7 @@ import pickle
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
-loaded_model = pickle.load(open(xg20.sav, 'rb'))
+loaded_model = pickle.load(open(xg20, 'rb'))
 
 def pp_Gender(Gender):
     Gender = 0
